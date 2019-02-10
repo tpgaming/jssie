@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge"
+        http-equiv="X-UA-Compatible">
+  <title>JSSIE</title>
+</head>
+<body onload="jssieInit(this)">
+  <h1>JSSIE!</h1>
+  <div id="gameLogo"></div>
+  <div id="gameLine"></div>
+  <div id="gameLetters"></div>
+  <div id="gameButtons">
+    <button id="playOn"
+         onclick="playOn(this)"
+         type="button">Play</button>
+  </div>
+  <div id="gameOptions">
+    <form id="optionsForm"
+          name="optionsForm"
+          onsubmit="validate(this); return false">
+      <input id="ez"
+            name="option"
+            type="radio"
+            value="easy"> Easy look at that :v<br>
+      <input checked
+            id="normal"
+            name="option"
+            type="radio"
+            value="normal"> Normal people<br>
+      <input checked
+            id="hard"
+            name="option"
+            type="radio"
+            value="hard"> Be a Tannos<br>
+      <button type="submit">Apply Settings</button>
+    </form>
+  </div>
+  <script type="text/javascript">
+        console.log("JSSIE's ALIVE!");
+
+        function jssieInit(element) {
+            console.log("On Body Load");
+            console.log("On Load Done");
+        }
+
+        function playOn(button) {
+            console.log("Bruh it got pressed");
+
+        }
+
+        function validate(form) {
+            var checkedOpt = document.querySelector("#gameOptions #optionsForm :checked");
+            console.log("Settings applied: " + String(checkedOpt.value));
+        }
+  </script>
+</body>
+</html>
